@@ -1,0 +1,20 @@
+<h5>*ng If</h5>
+
+<div *ngIf="cursos.length == 0">
+  <p>Não temos cursos para exibir</p>
+</div>
+<div *ngIf="cursos.length > 0">
+  <p>lista de cursos aqui</p>
+</div>
+
+<div *ngIf="mostrarCurso == false">
+  <p>Não temos cursos para exibir</p>
+</div>
+<div *ngIf="mostrarCurso == true">
+  <p>lista de cursos aqui</p>
+  <div *ngFor="let curso of cursos">
+    {{ curso }}
+  </div>
+</div>
+
+<button (click)="exibirCurso()">Exibir Cursos</button>
